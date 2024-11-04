@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '@/context/ThemeContext'
 import Image from 'next/image';
 
 const Sidebar = () => {
