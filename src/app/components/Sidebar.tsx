@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { useTheme } from '@/context/ThemeContext'
+import { useTheme } from '@/context/ThemeContext';
 import Image from 'next/image';
 
 const Sidebar = () => {
@@ -9,11 +9,11 @@ const Sidebar = () => {
 
   return (
     <div className={`flex flex-col ${isCollapsed ? 'w-20' : 'w-64'} bg-gray-100 dark:bg-gray-800 h-screen p-5 transition-width duration-300`}>
-      <button onClick={() => setIsCollapsed(!isCollapsed)} className="mb-4">
+      {/* <button onClick={() => setIsCollapsed(!isCollapsed)} className="mb-4">
         {isCollapsed ? '>' : '<'}
-      </button>
+      </button> */}
 
-      <div className="relative h-16 w-16 mb-6 mx-auto">
+      <div className="relative h-36 w-36 mb-10 mx-auto mt-10">
         <Image
           src={theme === 'light' ? '/logo-astronauta-light.png' : '/logo-astronauta-dark.png'}
           alt="Logo"
