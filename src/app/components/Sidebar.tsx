@@ -12,6 +12,12 @@ const Sidebar = () => {
       {/* <button onClick={() => setIsCollapsed(!isCollapsed)} className="mb-4">
         {isCollapsed ? '>' : '<'}
       </button> */}
+      <button
+        onClick={toggleTheme}
+        className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full text-gray-600 dark:text-gray-300"
+      >
+        {theme === 'light' ? '🌞' : '🌜'}
+      </button>
 
       <div className="relative h-36 w-36 mb-10 mx-auto mt-10">
         <Image
@@ -28,12 +34,12 @@ const Sidebar = () => {
         <SidebarItem title="Item 3" subItems={['Subitem 3.1', 'Subitem 3.2', 'Subitem 3.3']} />
       </nav>
 
-      <button
+      {/* <button
         onClick={toggleTheme}
         className="mt-auto bg-gray-200 dark:bg-gray-700 p-2 rounded-full text-gray-600 dark:text-gray-300"
       >
         {theme === 'light' ? '🌞' : '🌜'}
-      </button>
+      </button> */}
     </div>
   );
 };
