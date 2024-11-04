@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 import Image from 'next/image';
 
+
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const { theme, toggleTheme } = useTheme();
@@ -56,7 +57,7 @@ const SidebarItem = ({ title, subItems }: { title: string; subItems?: string[] }
         {title}
         {subItems && (
           <div className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}>
-            <Image src="/chevron.svg" alt="Dropdown Icon" width={20} height={20} />
+            <Image src="/LineMdChevronDownSquareTwotone.svg" alt="Dropdown Icon" width={20} height={20} />
           </div>
         )}
       </button>
