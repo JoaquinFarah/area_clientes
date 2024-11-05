@@ -41,17 +41,12 @@ const Sidebar = () => {
         </Link>
         
         <SidebarItem
-          title="Redes"
+          title="Pedidos"
           subItems={[
             { label: 'Instrucciones', href: '/pages/instructions' },
-            { label: 'Pedidos', href: '/pages/request' },
-          ]}
-        />
-        <SidebarItem
-          title="Profesional"
-          subItems={[
-            { label: 'Linkedin', href: 'https://www.linkedin.com/feed/' },
-            { label: 'YouTube', href: 'https://www.youtube.com/' },            
+            { label: 'Cargar Pedido', href: '/pages/request' },
+            { label: 'Ver Pedido', href: '/pages/watcher' },
+            { label: 'Estado Archivos', href: '/pages/state' },
           ]}
         />
         
