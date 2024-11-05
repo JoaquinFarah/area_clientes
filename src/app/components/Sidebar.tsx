@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaHome  } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { BsDoorOpenFill } from "react-icons/bs";
+import { RiStickyNoteAddLine } from "react-icons/ri";
 //Icons from reacticons
 
 const Sidebar = () => {
@@ -34,13 +35,13 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <nav>
-
         <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
           <FaHome className="w-5 h-5" aria-hidden="true" />
             <span className="pl-2">Página Principal</span>
         </Link>
-        
-        <SidebarItem
+        <div className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+        <RiStickyNoteAddLine className="w-5 h-5" aria-hidden="true" />
+        <SidebarItem 
           title="Pedidos"
           subItems={[
             { label: 'Instrucciones', href: '/pages/instructions' },
@@ -49,7 +50,11 @@ const Sidebar = () => {
             { label: 'Estado Archivos', href: '/pages/state' },
           ]}
         />
-        
+        </div>
+
+        <div className="bg-blue-600 w-full h-0.5 my-1"></div>
+
+
         <Link href="/pages/profile" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
             <CgProfile  className="w-5 h-5" aria-hidden="true" />
               <span className="pl-2">Perfil</span>
@@ -57,7 +62,7 @@ const Sidebar = () => {
 
         <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
             <BsDoorOpenFill className="w-5 h-5" aria-hidden="true" />
-              <span className="pl-2">Página Principal</span>
+              <span className="pl-2">Salir</span>
         </Link>
       </nav>
     </div>
