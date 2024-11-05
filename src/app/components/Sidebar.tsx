@@ -3,13 +3,17 @@ import { useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaHome  } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { BsDoorOpenFill } from "react-icons/bs";
 
 const Sidebar = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="flex flex-col w-64 bg-gray-100 dark:bg-gray-800 h-screen p-5">
-      {/* Botón para alternar el tema */}
+
+      {/* Button theme */}
       <button
         onClick={toggleTheme}
         className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full text-gray-600 dark:text-gray-300"
@@ -17,7 +21,7 @@ const Sidebar = () => {
         {theme === 'light' ? '🌞' : '🌜'}
       </button>
 
-      {/* Imagen superior */}
+      {/* Image */}
       <div className="relative h-36 w-36 mb-10 mx-auto mt-10">
         <Image
           src={theme === 'light' ? '/logo-astronauta-light.png' : '/logo-astronauta-dark.png'}
@@ -27,9 +31,14 @@ const Sidebar = () => {
         />
       </div>
 
-      {/* Menú de Navegación */}
+      {/* Sidebar */}
       <nav>
-        <SidebarItem title="Pagina Principal" href="/" />
+
+        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+          <FaHome className="w-5 h-5" aria-hidden="true" />
+            <span className="pl-2">Página Principal</span>
+        </Link>
+        
         <SidebarItem
           title="Redes"
           subItems={[
@@ -44,6 +53,16 @@ const Sidebar = () => {
             { label: 'YouTube', href: 'https://www.youtube.com/' },            
           ]}
         />
+        
+        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+            <CgProfile  className="w-5 h-5" aria-hidden="true" />
+              <span className="pl-2">Perfil</span>
+        </Link>
+
+        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+            <BsDoorOpenFill className="w-5 h-5" aria-hidden="true" />
+              <span className="pl-2">Página Principal</span>
+        </Link>
       </nav>
     </div>
   );
