@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaHome  } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { BsDoorOpenFill } from "react-icons/bs";
+//Icons from reacticons
 
 const Sidebar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -42,8 +43,8 @@ const Sidebar = () => {
         <SidebarItem
           title="Redes"
           subItems={[
-            { label: 'Facebook', href: 'https://www.facebook.com/' },
-            { label: 'Gmail', href: 'https://mail.google.com/mail/u/0/#inbox' },
+            { label: 'Instrucciones', href: '/pages/instructions' },
+            { label: 'Pedidos', href: '/pages/request' },
           ]}
         />
         <SidebarItem
@@ -54,7 +55,7 @@ const Sidebar = () => {
           ]}
         />
         
-        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+        <Link href="/pages/profile" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
             <CgProfile  className="w-5 h-5" aria-hidden="true" />
               <span className="pl-2">Perfil</span>
         </Link>
