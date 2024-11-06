@@ -15,7 +15,7 @@ const HeaderImage = () => (
         Ver Ejemplo
       </div>
     </Link>
-    <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black/50 p-4 rounded-lg">
+    <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 p-4 rounded-lg">
       <h2>Sistema de Niveles</h2>
       <p>Con tu crecimiento reduces tus costos de producción.</p>
     </div>

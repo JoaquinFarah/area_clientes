@@ -4,7 +4,7 @@ import InteractiveExample from '@/app/components/InteractiveExample';
 import Link from 'next/link';
 
 const PoliciesPage = () => (
-  <div className="bg-gray-900 text-gray-300 min-h-screen p-4">
+  <div className=" text-gray-400 min-h-screen p-4">
     <HeaderImage />
     <div className="container mx-auto">
       <div className="content p-6 rounded-lg shadow-lg">
