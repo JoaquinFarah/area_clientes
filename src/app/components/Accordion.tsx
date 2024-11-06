@@ -28,7 +28,7 @@ const Accordion = () => (
       title="🎯 Objetivo del Sistema de Premios"
       content="Nuestro sistema de premios tiene como objetivo reconocer y recompensar la fidelidad y el compromiso de nuestros clientes con nuestros servicios de impresión textil."
     />
-    {/* Añadir más items  */}
+    {/* Add more items  */}
   </div>
 );
 

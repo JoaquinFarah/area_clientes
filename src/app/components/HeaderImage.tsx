@@ -4,8 +4,8 @@ import Link from 'next/link';
 const HeaderImage = () => (
   <header className="relative text-center text-white">
     <Image
-      src="https://clientes.digitaltex.com.ar/assets/images/Imagenessis/Niveles.png"
-      alt="Astronauta bajando una escalera de niveles de colores neon"
+      src="/Niveles.png"
+      alt="Astronauta escalera"
       width={1200}
       height={600}
       className="w-full h-auto"

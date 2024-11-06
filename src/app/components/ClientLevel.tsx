@@ -16,6 +16,6 @@ const ClientLevel = () => {
   );
 };
 
-//Se convertira en la funcion cuando esten los datos
+//Will be used as a function when database is available
 
 export default ClientLevel;

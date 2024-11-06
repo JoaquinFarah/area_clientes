@@ -6,7 +6,7 @@ const ClientMeters = () => {
         <h2 className="text-center text-lg mb-4">Metros</h2>
         <p className="text-center text-sm text-gray-400 mb-2">Últimos 3 meses</p>
         
-        {/* La biblioteca como chart.js o recharts para los gráficos a futuro */}
+        {/* Use library chart.js or recharts for graphics */}
         <div className="relative w-64 h-64 mx-auto bg-pink-700 rounded-full flex items-center justify-center">
           <div className="absolute top-4 right-4 w-8 h-8 bg-gray-700 rounded-full"></div>
         </div>
