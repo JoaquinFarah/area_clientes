@@ -1,6 +1,7 @@
 import HeaderImage from '@/app/components/HeaderImage';
 import Accordion from '@/app/components/Accordion';
 import InteractiveExample from '@/app/components/InteractiveExample';
+import Link from 'next/link';
 
 const PoliciesPage = () => (
   <div className="bg-gray-900 text-gray-300 min-h-screen p-4">
@@ -15,7 +16,7 @@ const PoliciesPage = () => (
         <InteractiveExample />
       </section>
       <footer className="app-footer text-center mt-10 py-3">
-        <small>&copy; <a href="https://digitaltex.com.ar" target="_blank" className="text-teal-400">DigitalTex EstampadosMendoza</a></small>
+        <small>&copy; <Link href="https://digitaltex.com.ar" target="_blank" className="text-teal-400">DigitalTex EstampadosMendoza</Link></small>
       </footer>
     </div>
   </div>
