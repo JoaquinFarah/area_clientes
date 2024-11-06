@@ -14,7 +14,7 @@ import ClientLevel from '@/app/components/ClientLevel';
 import ClientMeters from '@/app/components/ClientMeters';
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center min-h-screen p-6 bg-gray-900 text-gray-300">
+    <div className="flex flex-col items-center min-h-screen p-6">
       {/* Título y saludo */}
       <div className="w-full flex justify-between items-center mb-8">
         <h1 className="text-2xl font-bold">¡Bienvenido @USUARIO!</h1>

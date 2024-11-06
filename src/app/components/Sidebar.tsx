@@ -13,7 +13,7 @@ const Sidebar = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="flex flex-col w-64 bg-gray-100 dark:bg-gray-800 h-screen p-5">
+    <div className="flex flex-col w-64 bg-gray-100 dark:bg-gray-800 h-auto p-5">
 
       {/* Button theme */}
       <button
