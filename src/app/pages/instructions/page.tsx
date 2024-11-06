@@ -15,9 +15,9 @@ const PoliciesPage = () => (
         <h2 className="header text-center text-2xl">📊 Ejemplo Interactivo del Sistema 📊</h2>
         <InteractiveExample />
       </section>
-      <footer className="app-footer text-center mt-10 py-3">
+      {/* <footer className="app-footer text-center mt-10 py-3">
         <small>&copy; <Link href="https://digitaltex.com.ar" target="_blank" className="text-teal-400">DigitalTex EstampadosMendoza</Link></small>
-      </footer>
+      </footer> */}
     </div>
   </div>
 );

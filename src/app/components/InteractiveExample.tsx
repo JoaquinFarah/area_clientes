@@ -31,10 +31,10 @@ const InteractiveExample = () => {
   };
 
   return (
-    <div className="region">
-      <button onClick={() => addMeters(5)} className="btn btn-green">Agregar 5 metros</button>
-      <button onClick={() => addMeters(10)} className="btn btn-green">Agregar 10 metros</button>
-      <button onClick={() => addMeters(20)} className="btn btn-green">Agregar 20 metros</button>
+    <div className="region mt-5">
+      <button onClick={() => addMeters(5)} className="btn btn-green pr-3">Agregar 5 metros</button>
+      <button onClick={() => addMeters(10)} className="btn btn-green pr-3">Agregar 10 metros</button>
+      <button onClick={() => addMeters(20)} className="btn btn-green pr-3">Agregar 20 metros</button>
       <button onClick={advanceTime} className="btn btn-violet">Avanzar 1 día</button>
       <div className="mt-4">
         <p>Metros de ejemplo cargados: {meters}</p>
