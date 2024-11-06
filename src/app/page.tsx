@@ -10,15 +10,14 @@
 // }
 
 
-import ClientLevel from '@/app/components/ClientLevel'
+import ClientLevel from '@/app/components/ClientLevel';
 import ClientMeters from '@/app/components/ClientMeters';
-
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center min-h-screen p-6 bg-gray-900 text-gray-300">
       {/* Título y saludo */}
       <div className="w-full flex justify-between items-center mb-8">
-        <h1 className="text-2xl font-bold">¡Bienvenido Carlos Barahona!</h1>
+        <h1 className="text-2xl font-bold">¡Bienvenido @USUARIO!</h1>
         <div className="text-right">
           <p className="text-lg font-semibold">Saldo a favor: $0.00</p>
           <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
@@ -26,10 +25,11 @@ export default function HomePage() {
           </button>
         </div>
       </div>
+      
 
       {/* Componente de nivel del cliente */}
       <ClientLevel />
-
+      <div className="bg-green-500 w-full h-0.5"></div>
       {/* Componente de metros del cliente */}
       <ClientMeters />
     </div>
