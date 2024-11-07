@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+import Image from 'next/image';
 
 const InteractiveExample = () => {
   const [meters, setMeters] = useState(0);
@@ -26,8 +27,26 @@ const InteractiveExample = () => {
       <div className="mt-4">
         <p>Metros de ejemplo cargados: {meters}</p>
         <p>Nivel de ejemplo: {level}</p>
-      </div>
+        <div className="mt-3"><span className="spaceship">🚀</span></div>
+      </div> 
+      <p className="text-neon mt-4">Nuestro sistema de premios se basa en la cantidad de metros cargados por el cliente durante los últimos 30 días. Al avanzar el tiempo, los metros cargados anteriormente pueden vencer, afectando el nivel de premio del cliente. Mantén tus cargas de metros constantes para mantener o mejorar tu nivel de premio.</p>
+      <p className="text-neon">Ejemplo de cómo se acumulan los metros:
+        <ul>
+          <li>Si cargas 5 metros hoy, tu nivel será Neo Iniciado.</li>
+          <li>Si cargas 10 metros más mañana, tendrás un total de 15 metros y alcanzarás el nivel Explorador.</li>
+          <li>Si cargas 20 metros más en una semana, tendrás un total de 35 metros, y alcanzarás el nivel Maestro Creativo.</li>
+          <li>Si no realizas más cargas durante 30 días, los metros vencerán y tu nivel bajará de acuerdo con la cantidad de metros restantes.</li>
+        </ul>
+        <div className="flex flex-col items-center mt-5">
+          <Image src="/placeholder500x300.png" alt="Ejemplo de Acumulación de Metros" width={500} height={300}/>
+        </div>
+      </p>
+
+      <div>
+      
+      </div>     
     </div>
+   
   );
 };
 
