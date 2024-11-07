@@ -9,7 +9,6 @@ const InteractiveExample = () => {
     setMeters((prev) => prev + amount);
     updateLevel(meters + amount);
   };
-
   
   const updateLevel = (meters: number) => {
     if (meters >= 500) setLevel('Núcleo Fusión');
