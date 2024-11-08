@@ -4,25 +4,30 @@ import Image from 'next/image';
 export default function loginPage() {
   return (
     
-    <div className="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style="background-image:url('https://images.unsplash.com/photo-1499123785106-343e69e68db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80')">
+    <div className="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style={{ backgroundImage: "url('/Niveles.png')" }} >
     <div className="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
         <div className="text-white">
-        <div className="mb-8 flex flex-col items-center">
-            <Image src="/Niveles.png" height={300} width={300} alt="escalera" />
-            <h1 className="mb-2 text-2xl">Instagram</h1>
-            <span className="text-gray-300">Enter Login Details</span>
+            <div className="mb-8 flex flex-col items-center">
+             <Image src="/logo-login.png" height={500} width={500} alt="escalera" />
+                <h1 className="mb-2 text-2xl">Instagram</h1>
+                    <span className="text-gray-300">Enter Login Details</span>
         </div>
         <form action="#">
             <div className="mb-4 text-lg">
-            <input className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="name" placeholder="id@email.com" />
+                <input className="bg-black border-cyan-400 rounded-3xl border-none bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-gray-500 shadow-lg outline-none backdrop-blur-md w-full" type="text" name="name" placeholder="@Email" />
             </div>
 
             <div className="mb-4 text-lg">
-            <input className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
+                <input className="rounded-3xl border-none bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-gray-500 shadow-lg outline-none backdrop-blur-md w-full" type="Password" name="name" placeholder="DNI/CUIT" />
             </div>
-            <div className="mt-8 flex justify-center text-lg text-black">
-            <button type="submit" className="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
+                <div className="mt-8 flex justify-center text-lg text-black">
+                <button type="submit" className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-lg font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            Iniciar Sesión
+            </span>
+            </button>
             </div>
+            
         </form>
         </div>
     </div>
