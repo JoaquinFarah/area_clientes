@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <div className="flex dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-            {/* <Sidebar /> */}
+            <Sidebar />
             <main className="p-10 flex-1">
               {children}
             </main>

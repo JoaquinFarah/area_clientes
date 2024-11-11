@@ -27,8 +27,7 @@ export default function loginPage() {
             Iniciar Sesión
             </span>
             </button>
-            </div>
-            
+            </div>            
             
         </form>
         </div>
