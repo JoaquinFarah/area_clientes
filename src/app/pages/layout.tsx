@@ -13,7 +13,6 @@ export default function PagesLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
       <div>
         <ThemeProvider>
           <div className="flex dark:bg-gray-900 text-gray-900 dark:text-gray-100">
