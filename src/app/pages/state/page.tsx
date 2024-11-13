@@ -22,12 +22,12 @@ const EstadoArchivos: React.FC<EstadoArchivosProps> = ({ results, clienteId, nom
 
   const handleUpdateClick = (idError: string) => {
     setLoadingId(idError);
-    // Aquí podrías realizar una llamada para actualizar el trabajo y manejar el resultado
-    setTimeout(() => setLoadingId(null), 2000); // Simula una espera para volver al estado de no cargando
+    // Llamada para actualizar el trabajo y manejar el resultado, (results y clienteId) se obtienen a través de props o desde un API
+    setTimeout(() => setLoadingId(null), 2000); // Mockea una espera para volver al estado de no cargando
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 h-screen w-full">
       <h1 className="text-2xl font-bold mb-6">Estado de los archivos de cada trabajo</h1>
 
       <input type="hidden" value={clienteId} />
@@ -35,16 +35,16 @@ const EstadoArchivos: React.FC<EstadoArchivosProps> = ({ results, clienteId, nom
       <input type="hidden" id="idCliente" value={clienteId} />
       <input type="hidden" id="nombreCliente" value={nombreCliente} />
 
-      <div className="mb-8 bg-blue-500">
+      <div className="mb-8">
         <div className="flex items-center mb-4">
           <i className="bi bi-tags-fill text-lg mr-2" />
           <MdOutlineSpeakerNotesOff />
           <h5 className="ml-2 text-lg font-semibold">Trabajos con errores</h5>
         </div>
         <div className="overflow-x-auto">
-          <table className="min-w-full border-2 border-fuchsia-600">
+          <table className="min-w-full border-2 border-cyan-600">
             <thead>
-              <tr className="text-center  bg-blue-500">
+              <tr className="text-center bg-pink-500 text-white">
                 <th className="px-4 py-2 border-b">Fecha Creación</th>
                 <th className="px-4 py-2 border-b">Trabajo</th>
                 <th className="px-4 py-2 border-b">Mensaje</th>
@@ -54,7 +54,10 @@ const EstadoArchivos: React.FC<EstadoArchivosProps> = ({ results, clienteId, nom
             <tbody>
               {results && results.length > 0 ? (
                 results.map((r) => (
-                  <tr key={r.idError} className="text-center border-b">
+                  <tr
+                    key={r.idError}
+                    className="text-center border-b bg-gradient-to-r from-pink-400 to-pink-600 text-white shadow-lg"
+                  >
                     <td className="px-4 py-2">{new Date(r.fecha).toLocaleDateString('es-AR')}</td>
                     <td className="px-4 py-2">{r.trabajo}</td>
                     <td className="px-4 py-2">{r.mensaje}</td>
@@ -74,8 +77,8 @@ const EstadoArchivos: React.FC<EstadoArchivosProps> = ({ results, clienteId, nom
                   </tr>
                 ))
               ) : (
-                <tr>
-                  <td colSpan={4} className="text-center py-4">
+                <tr className="text-center bg-gradient-to-r from-pink-400 to-pink-600 text-white shadow-lg">
+                  <td colSpan={4} className="py-4">
                     No hay trabajos con errores
                   </td>
                 </tr>
