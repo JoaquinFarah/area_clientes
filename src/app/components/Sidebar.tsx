@@ -59,7 +59,7 @@ const Sidebar = () => {
               <span className="pl-2">Perfil</span>
         </Link>
 
-        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-red-600 rounded">
+        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-red-600 hover:text-gray-300 dark:hover:bg-red-600 rounded">
             <BsDoorOpenFill className="w-5 h-5" aria-hidden="true" />
               <span className="pl-2">Salir</span>
         </Link>
