@@ -35,9 +35,9 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <nav>
-        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+        <Link href="/pages/dashboard" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
           <FaHome className="w-5 h-5" aria-hidden="true" />
-            <span className="pl-2">Página Principal</span>
+            <span className="pl-2">Panel</span>
         </Link>
         <div className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
         <RiStickyNoteAddLine className="w-5 h-5" aria-hidden="true" />
@@ -59,7 +59,7 @@ const Sidebar = () => {
               <span className="pl-2">Perfil</span>
         </Link>
 
-        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+        <Link href="/" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-red-600 rounded">
             <BsDoorOpenFill className="w-5 h-5" aria-hidden="true" />
               <span className="pl-2">Salir</span>
         </Link>
