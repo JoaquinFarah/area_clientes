@@ -9,7 +9,7 @@ export default function requestPage() {
   return (
     <div className="p-4 h-screen w-full">
       <h1 className={`text-2xl font-bold mb-6 text-center ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-        Cargar Pedidos
+        Cargar Nuevo Pedido
       </h1>
 
       <div className={`mb-8 p-1 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-teal-500 to-green-500' : 'bg-gradient-to-br from-pink-500 to-yellow-500'}`}>
