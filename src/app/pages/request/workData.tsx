@@ -5,9 +5,15 @@ import { useTheme } from "@/context/ThemeContext";
 export const WorkData = () => {
   const { theme } = useTheme();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Lugar de Entrega");
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
+  };
+
+  const handleOptionSelect = (option: string) => {
+    setSelectedOption(option);
+    setDropdownOpen(false); // Cierra el dropdown después de seleccionar una opción
   };
 
   return (
@@ -19,7 +25,7 @@ export const WorkData = () => {
       <div className={`${theme === "dark" ? "bg-[#1c1b29]" : "bg-white"} p-4 rounded-lg`}>
         <div className="flex items-center mb-4">
           <PiListStarLight className="w-5 h-5" />
-          <i className={`bi bi-tags-fill text-lg mr-2 ${theme === "dark" ? "text-teal-400" : "text-pink-500"}`}/>
+          <i className={`bi bi-tags-fill text-lg mr-2 ${theme === "dark" ? "text-teal-400" : "text-pink-500"}`} />
           <h5 className={`text-lg ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
             Datos del trabajo:
           </h5>
@@ -34,9 +40,9 @@ export const WorkData = () => {
               className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" "
             />
-              <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-teal-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-teal-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-teal-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Nombre del trabajo
-              </label>
+            <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-teal-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-teal-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-teal-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Nombre del trabajo
+            </label>
           </div>
 
           {/* Dropdown */}
@@ -45,8 +51,8 @@ export const WorkData = () => {
               onClick={toggleDropdown}
               className="w-full h-full bg-white border border-orange-200 text-gray-700 px-4 rounded inline-flex justify-between items-center dark:bg-[#20293A] dark:border-slate-700 dark:text-gray-400"
             >
-              <span>Lugar de Entrega</span>
-              <svg 
+              <span>{selectedOption}</span>
+              <svg
                 className="ml-2 h-4 w-4"
                 fill="none"
                 stroke="currentColor"
@@ -64,32 +70,33 @@ export const WorkData = () => {
 
             {dropdownOpen && (
               <div className="absolute z-50 mt-2 w-full rounded-md shadow-lg bg-white border border-gray-200 dark:bg-[#20293A] dark:border-slate-700">
-                <div className="py-1 text-gray-700 dark:text-gray-200 text-sm"
+                <div
+                  className="py-1 text-gray-700 dark:text-gray-200 text-sm"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <p 
-                    
+                  <p
+                    onClick={() => handleOptionSelect("Retira en el local - Mendoza")}
                     className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a]"
                     role="menuitem"
                   >
                     Retira en el local - Mendoza
                   </p>
-                  <a
-                    
+                  <p
+                    onClick={() => handleOptionSelect("Retira en el local - C.A.B.A.")}
                     className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a]"
-                    role="menitem"
+                    role="menuitem"
                   >
                     Retira en el local - C.A.B.A.
-                  </a>
-                  <a
-                    
+                  </p>
+                  <p
+                    onClick={() => handleOptionSelect("Envio a domicilio")}
                     className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a]"
                     role="menuitem"
                   >
                     Envio a domicilio
-                  </a>
+                  </p>
                 </div>
               </div>
             )}
