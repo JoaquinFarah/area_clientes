@@ -56,9 +56,8 @@ export const WorkImage: React.FC = () => {
           </h5>
         </div>
 
-        {/* Botón centrado */}
         <div className="flex flex-col items-center justify-center">
-          {/* Input de selección de archivos */}
+          {/* Files Input  */}
           <input
             type="file"
             multiple
@@ -69,18 +68,17 @@ export const WorkImage: React.FC = () => {
           />
           <label
             htmlFor="file-input"
-            className="cursor-pointer text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            className="cursor-pointer text-white bg-teal-500 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           >
             Subir Archivos
           </label>
 
-          {/* Texto debajo del botón */}
           <p
             className={`mt-2 text-sm ${
               theme === "dark" ? "text-teal-400" : "text-gray-500"
             }`}
           >
-            Solamente archivos .png
+            (Solamente archivos .png)
           </p>
         </div>
       </div>
