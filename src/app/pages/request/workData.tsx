@@ -26,7 +26,7 @@ export const WorkData = () => {
         </div>
         <div className={`h-0.5 w-full mb-8 ${theme === "dark" ? "bg-white" : "bg-black"}`}></div>
 
-        {/* Input y Dropdown alineados */}
+        {/* Input & Dropdown */}
         <div className="flex items-center justify-between w-full">
           {/* Input */}
           <div className="relative h-10 w-72">
@@ -40,12 +40,12 @@ export const WorkData = () => {
           </div>
 
           {/* Dropdown */}
-          <div className="relative h-10 w-64">
+          <div className="relative h-10 w-64 mr-20">
             <button
               onClick={toggleDropdown}
-              className="w-full h-full bg-white border border-gray-200 text-gray-700 px-4 rounded inline-flex justify-between items-center dark:bg-[#20293A] dark:border-slate-700 dark:text-gray-400"
+              className="w-full h-full bg-white border border-orange-200 text-gray-700 px-4 rounded inline-flex justify-between items-center dark:bg-[#20293A] dark:border-slate-700 dark:text-gray-400"
             >
-              <span>Select an option</span>
+              <span>Lugar de Entrega</span>
               <svg 
                 className="ml-2 h-4 w-4"
                 fill="none"
