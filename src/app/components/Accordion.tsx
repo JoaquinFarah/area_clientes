@@ -32,7 +32,7 @@ const Accordion = () => {
   };
 
   return (
-    <div>
+    <div className="text-xl">
       <AccordionItem
         title="🎯 Objetivo del Sistema de Premios"
         content="Nuestro sistema de premios tiene como objetivo reconocer y recompensar la fidelidad y el compromiso de nuestros clientes con nuestros servicios de impresión textil."
