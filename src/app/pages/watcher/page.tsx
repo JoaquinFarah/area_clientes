@@ -130,14 +130,14 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
       <div
         className={`app-card shadow-md mb-4 border ${
           theme === "dark"
-            ? "border-red-500 bg-gray-800 bg-red-500/20" 
-            : "border-red-500 bg-gray-100 bg-red-500/20"
+            ? "border-red-500 bg-gray-800 hover:bg-red-500/20" 
+            : "border-red-500 bg-gray-100 hover:bg-red-500/20"
         }`}
       >
         <div className="p-4">
           <strong>IMPORTANTE</strong>
           <p>
-            Si tiene órdenes en estado de pago <b>PENDIENTE</b>, revise que el
+            Si tiene órdenes en estado de pago <b className="text-red-600 underline">PENDIENTE</b>, revise que el
             N° Operación sea correcto.
           </p>
         </div>
