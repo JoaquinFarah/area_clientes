@@ -78,7 +78,7 @@ export const WorkSelect: React.FC = () => {
           </svg>
         </button>
         {isDropdownOpen && (
-          <div className="mt-4 bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+          <div className="mt-4 bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-[#20293A] dark:divide-gray-600">
             <ul className="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200">
               {[
                 "DTF - $9.000",
@@ -87,7 +87,7 @@ export const WorkSelect: React.FC = () => {
               ].map((type, index) => (
                 <li key={index}>
                   <div
-                    className="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    className="flex p-2 rounded hover:bg-gray-200 dark:hover:bg-violet-500"
                     onClick={() => handleOptionSelect(type)}
                   >
                     <input
