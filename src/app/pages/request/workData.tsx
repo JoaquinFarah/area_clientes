@@ -49,7 +49,7 @@ export const WorkData = () => {
           <div className="relative h-10 w-64 mr-20">
             <button
               onClick={toggleDropdown}
-              className="w-full h-full bg-white border border-orange-300 text-gray-700 px-4 rounded inline-flex justify-between items-center dark:bg-[#20293A] dark:border-slate-700 dark:text-gray-400"
+              className="w-full h-full bg-white border border-orange-300 text-gray-700 px-4 rounded inline-flex justify-between items-center dark:bg-[#20293A] dark:border-teal-700 dark:text-white"
             >
               <span>{selectedOption}</span>
               <svg
@@ -69,7 +69,7 @@ export const WorkData = () => {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute z-50 mt-2 w-full rounded-md shadow-lg bg-white border border-gray-200 dark:bg-[#20293A] dark:border-slate-700">
+              <div className="absolute z-50 mt-2 w-full rounded-md shadow-lg bg-white border border-orange-300 dark:bg-[#20293A] dark:border-teal-700">
                 <div
                   className="py-1 text-gray-700 dark:text-gray-200 text-sm"
                   role="menu"
