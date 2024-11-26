@@ -153,7 +153,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
           ></i>
           <h5 className="text-lg font-semibold">Pedidos</h5>
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto rounded-md">
           <table
             className={`table-auto border-collapse w-full ${
               theme === "dark" ? "border-gray-700" : "border-gray-200"
@@ -162,7 +162,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
             <thead>
               <tr
                 className={`text-center ${
-                  theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-800"
+                  theme === "dark" ? "bg-gradient-to-br from-teal-500 to-green-500 text-gray-300" : "bg-gradient-to-br from-pink-500 to-yellow-500 text-gray-800"
                 }`}
               >
                 <th>#</th>
