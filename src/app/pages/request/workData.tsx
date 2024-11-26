@@ -78,21 +78,21 @@ export const WorkData = () => {
                 >
                   <p
                     onClick={() => handleOptionSelect("Retira en el local - Mendoza")}
-                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a] hover:cursor-pointer"
+                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-violet-500 hover:cursor-pointer"
                     role="menuitem"
                   >
                     Retira en el local - Mendoza
                   </p>
                   <p
                     onClick={() => handleOptionSelect("Retira en el local - C.A.B.A.")}
-                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a] hover:cursor-pointer"
+                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-violet-500 hover:cursor-pointer"
                     role="menuitem"
                   >
                     Retira en el local - C.A.B.A.
                   </p>
                   <p
                     onClick={() => handleOptionSelect("Envio a domicilio")}
-                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-[#161d2a] hover:cursor-pointer"
+                    className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-violet-500 hover:cursor-pointer"
                     role="menuitem"
                   >
                     Envio a domicilio

@@ -18,11 +18,11 @@ export default function RequestPage() {
       
       <WorkSelect/>
       
-      <div className= {`h-0.5 w-full mb-10 ${theme === 'dark' ? 'bg-white' : 'bg-black' }`}> </div>
+      <div className= {`h-0.5 w-full mb-10 ${theme === 'dark' ? 'bg-violet-500' : 'bg-black' }`}> </div>
 
       <WorkData/>     
 
-      <div className= {`h-0.5 w-full mb-8 ${theme === 'dark' ? 'bg-white' : 'bg-black'}`}></div>
+      <div className= {`h-0.5 w-full mb-8 ${theme === 'dark' ? 'bg-violet-500' : 'bg-black'}`}></div>
 
       <WorkImage/>
 
