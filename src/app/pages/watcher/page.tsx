@@ -124,7 +124,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <h1 className="text-2xl font-bold mb-6">Listado de Pedidos</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center">Listado de Pedidos</h1>
 
       {/* Importante */}
       <div
