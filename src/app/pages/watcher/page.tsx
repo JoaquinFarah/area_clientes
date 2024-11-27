@@ -92,7 +92,7 @@
 //   );
 // };
 
-// export default OrderList;
+
 "use client";
 
 import React from "react";
@@ -126,7 +126,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
     >
       <h1 className="text-2xl font-bold mb-6 text-center">Listado de Pedidos</h1>
 
-      {/* Importante */}
+      {/* Important */}
       <div
         className={`app-card shadow-md mb-4 border ${
           theme === "dark"
@@ -135,7 +135,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
         }`}
       >
         <div className="p-4">
-          <strong>IMPORTANTE</strong>
+          <strong className="text-2xl">IMPORTANTE</strong>
           <p>
             Si tiene órdenes en estado de pago <b className="text-red-600 underline">PENDIENTE</b>, revise que el
             N° Operación sea correcto.
@@ -143,7 +143,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
         </div>
       </div>
 
-      {/* Tabla de Pedidos */}
+      {/* Request table */}
       <div className="mb-4">
         <div className="flex items-center mb-2">
           <i
@@ -178,7 +178,7 @@ const OrderList: React.FC<Props> = ({ registrosTemporales }) => {
               </tr>
             </thead>
             <tbody>
-              {/* Aquí va la lógica para listar órdenes */}
+              {/* list orders logic */}
               <tr>
                 <td
                   colSpan={10}
