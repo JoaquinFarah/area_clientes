@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { login, signup } from './actions'
+import { logout } from '../logout/actions';
 
 export default function LoginPage() {
   return (
@@ -29,23 +30,27 @@ export default function LoginPage() {
                 </span>
                 </button>
             </div> 
+
+
+
+            
             <button formAction={signup}>Register</button>    
 
             
         </form>
+
+        <form action={logout} className="mt-6">
+            <button
+              type= "submit" 
+              className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+            >
+              Cerrar Sesión
+            </button>
+
+          </form>    
         </div>
     </div>
     </div>
   )
 }
 
-
-//       <label htmlFor="email">Email:</label>
-//       
-//       <label htmlFor="password">Password:</label>
-
-//       <button formAction={login}>Log in</button>
-//       <button formAction={signup}>Register</button>
-//     </form>
-//   )
-// }
