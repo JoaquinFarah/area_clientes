@@ -17,6 +17,7 @@
 import { redirect } from 'next/navigation';
 import { createClient } from '../../../../supabase/server';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function PrivatePage() {
   const supabase = await createClient();
@@ -27,8 +28,6 @@ export default async function PrivatePage() {
   }
 
   return (
-    <>
-    
       <section className="pt-16 bg-blueGray-50">
         <div className="w-full lg:w-4/12 px-4 mx-auto">
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
@@ -95,9 +94,9 @@ export default async function PrivatePage() {
                       giving it a warm, intimate feel with a solid groove
                       structure. An artist of considerable range.
                     </p>
-                    <a href="/pages" className="font-normal text-pink-500">
+                    <Link href="/pages" className="font-normal text-pink-500">
                       Show more
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -105,6 +104,5 @@ export default async function PrivatePage() {
           </div>
         </div>
       </section>
-    </>
   );
 }
