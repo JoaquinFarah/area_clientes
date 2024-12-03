@@ -8,3 +8,6 @@ export default function MainPage() {
     </div>
   )
 }
+
+
+//mi supabase - Digitaltex2024!
