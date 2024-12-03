@@ -54,7 +54,7 @@ const Sidebar = () => {
 
         <div className="bg-cyan-600 w-full h-0.5 my-1"></div>
 
-        <Link href="/pages/profile" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
+        <Link href="/pages/private" className="flex items-center justify-start w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
             <CgProfile  className="w-5 h-5" aria-hidden="true" />
               <span className="pl-2">Perfil</span>
         </Link>
